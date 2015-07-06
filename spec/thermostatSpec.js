@@ -30,7 +30,17 @@ describe('thermostat', function(){
     });
 
      it('is on power saving mode as default',function(){ 
-      expect(thermostat.powersave()).toBe(true);
+      expect(thermostat.powerSave).toBe(true);
+     });
+
+     it('max is equal to 25 degress if powerSave is on',function(){
+      thermostat.powerSave = true
+
+       for (var i = 0; i < 5 ; i++){
+        thermostat.increaseTemp()
+      }
+
+      expect(thermostat.increaseTemp()).toBe(25)
      });
 
 
