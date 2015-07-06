@@ -17,7 +17,11 @@
       Thermostat.prototype.increaseTemp = function() {
         _currentTemp += 1
         return _currentTemp
+      };
 
+      Thermostat.prototype.decreaseTemp = function() {
+        _currentTemp -= 1
+        return _currentTemp
       };
 
 
