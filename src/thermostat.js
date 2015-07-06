@@ -5,12 +5,23 @@
       this.currentTemp = _currentTemp;
       this.powerSave = _powerSave;
 
+      
       Thermostat.prototype.increaseTemp = function() {
         _currentTemp += 1
 
-        if (_powerSave === true )
-          if (_currentTemp === 26) {
+        if (_powerSave === true ){
+          if (_currentTemp === 26){
             return _currentTemp = 25
+          } 
+
+        else if (_powerSave === false) {
+          if (_currentTemp === 33){
+            return _currentTemp = 32
+          }
+        };
+
+        
+
         } 
         return _currentTemp
       };
@@ -23,6 +34,12 @@
         } else {
           return _currentTemp
         };
+
+
+     // Thermostat.prototype.powerSaveOff = function() {
+     //    _powerSave = false
+
+     //    };
 
 
       };

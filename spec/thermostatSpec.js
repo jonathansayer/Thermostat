@@ -43,6 +43,24 @@ describe('thermostat', function(){
       expect(thermostat.increaseTemp()).toBe(25)
      });
 
+     it('can be turned off powersave',function(){
+      
+      thermostat.powerSave = false
+      expect(thermostat.powerSave).toBe(false);
+
+     });
+
+     it('max is equal to 32 degrees if powerSave is off',function(){
+      thermostat.powerSave = false
+
+      for (var i = 0; i < 12 ; i++){
+        thermostat.increaseTemp()
+      }
+
+      expect(thermostat.increaseTemp()).toBe(32)
+
+     });
+
 
   });
 });
