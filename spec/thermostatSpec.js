@@ -9,12 +9,12 @@ describe('thermostat', function(){
 
   describe('temperature', function(){
     it('intially at 20 degrees',function(){
-      expect(thermostat.temperature()).toBe(20);
+      expect(thermostat.currentTemp).toBe(20);
 
     });
 
     it('can increase', function(){
-      expect(thermostat.increaseTemp(1)).toBe(21);
+      expect(thermostat.increaseTemp()).toBe(21);
     });
   });
 });
