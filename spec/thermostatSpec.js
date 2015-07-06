@@ -26,9 +26,14 @@ describe('thermostat', function(){
       for (var i = 0; i < 10 ; i++){
         thermostat.decreaseTemp()
       }
-
       expect(thermostat.decreaseTemp()).toBe(10);
     });
+
+     it('is on power saving mode as default',function(){ 
+      expect(thermostat.powersave()).toBe(true);
+     });
+
+
   });
 });
 
