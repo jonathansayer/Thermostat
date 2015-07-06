@@ -13,13 +13,9 @@ describe('thermostat', function(){
 
     });
 
-
+    it('can increase', function(){
+      expect(thermostat.increaseTemp(1)).toBe(21);
+    });
   });
-
-
-
-
-
-
-
 });
+
