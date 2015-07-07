@@ -32,9 +32,10 @@
         } else {
           return this.currentTemp
         };
+      };
 
-
-
+      Thermostat.prototype.reset = function() {
+          this.currentTemp = 20
       };
 
 
