@@ -1,45 +1,38 @@
 
     function Thermostat(){
-      var _currentTemp = 20;
-      var _powerSave = true;
-      this.currentTemp = _currentTemp;
-      this.powerSave = _powerSave;
+      // var _currentTemp = 20;
+      // var _powerSave = true;
+      this.currentTemp = 20;
+      this.powerSave = true;
 
       
       Thermostat.prototype.increaseTemp = function() {
-        _currentTemp += 1
+        this.currentTemp += 1
 
-        if (_powerSave === true ){
-          if (_currentTemp === 26){
-            return _currentTemp = 25
+        if (this.powerSave === true ){
+          if (this.currentTemp === 26){
+            return this.currentTemp = 25
           } 
+        }
 
-        else if (_powerSave === false) {
-          if (_currentTemp === 33){
-            return _currentTemp = 32
-          }
-        };
-
-        
-
-        } 
-        return _currentTemp
+        if (this.powerSave === false ){
+          if (this.currentTemp === 33){
+            return this.currentTemp = 32
+          } 
+        }
+      
+        return this.currentTemp
       };
 
       Thermostat.prototype.decreaseTemp = function() {
-        _currentTemp -= 1
+        this.currentTemp -= 1
 
-        if (_currentTemp === 9) {
-          return _currentTemp = 10
+        if (this.currentTemp === 9) {
+          return this.currentTemp = 10
         } else {
-          return _currentTemp
+          return this.currentTemp
         };
 
-
-     // Thermostat.prototype.powerSaveOff = function() {
-     //    _powerSave = false
-
-     //    };
 
 
       };
